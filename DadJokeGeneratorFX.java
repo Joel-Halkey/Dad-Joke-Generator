@@ -15,7 +15,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class DadJokeGeneratorFX extends Application {
-    public static Text daddy = new Text();
+    public static Text dadda = new Text();
     public static Text dad = new Text("      ");
     public static ArrayList<String> dadJokes = new ArrayList();
     public void start(Stage primaryStage) throws IOException {
@@ -35,9 +35,9 @@ public class DadJokeGeneratorFX extends Application {
         
         grid.add(btn,0,1); 
         grid.add(dad, 1, 1);
-        grid.add(daddy, 2 ,1);
+        grid.add(dadda, 2 ,1);
         btn.setFont(Font.font(20));
-        daddy.setFont(Font.font(20));
+        dadda.setFont(Font.font(20));
         
         
         Scene scene = new Scene(grid, 1000, 50);
@@ -54,7 +54,7 @@ public class DadJokeGeneratorFX extends Application {
     public void processDadJoke(ActionEvent event) {
         Random rand = new Random();
         int temp = rand.nextInt(dadJokes.size());
-        daddy.setText(dadJokes.get(temp));
+        dadda.setText(dadJokes.get(temp));
     }
     
 }
